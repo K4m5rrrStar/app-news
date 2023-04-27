@@ -51,6 +51,19 @@ public class DanhMucAdaper extends RecyclerView.Adapter<DanhMucAdaper.ViewHolder
         });
 
     }
-public class DanhMucAdaper {
+    @Override
+    public int getItemCount() {
+        return mListDanhMuc.size();
+    }
 
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView txtDanhMuc;
+        LinearLayout layout;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            txtDanhMuc = (TextView) itemView.findViewById(R.id.itemDanhMuc_txtDanhMuc);
+            layout = (LinearLayout) itemView.findViewById(R.id.itemDanhMuc_layout);
+        }
+    }
 }
